@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 // Bring In Models
 var Metric = require('./models/metric');
 
-mongoose.connect('mongodb://brad:Password1@ds059115.mlab.com:59115/rocostats', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://user:userpassword@ds059115.mlab.com:59115/rocostats', {useNewUrlParser: true, useUnifiedTopology: true});
 let db = mongoose.connection;
 // console.log('Connected to db');
 
