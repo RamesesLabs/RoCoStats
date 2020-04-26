@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .container.text-center
+        h1 Welcome To RoCo Stats
+    
+    .card.justify-content-center.m-3
+        ul.list-group
+            each metric in metrics
+                li.list-group-item
+                    a(href='/metric/'+metric._id)= metric.title
+                
+            
+

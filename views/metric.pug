@@ -1,0 +1,23 @@
+extends layout
+
+block content 
+    h1.text-center= metric.title
+    .card.justify-content-center
+        ul.list-group
+            li.list-group-item.text-center
+                
+
+    h1.text-center Rowan County Municipalities at a Glance
+    .card(style='width: 18rem;')      
+      .card-body
+        h5.card-title.text-center= metric.title
+        p.card-text= metric.comment 
+      ul.list-group.list-group-flush
+        label.text-center.pt-3 Data Source:
+        li.list-group-item.text-center= metric.source            
+        li.list-group-item Dapibus ac facilisis in
+        li.list-group-item Vestibulum at eros
+      .card-body.justify-content-center
+
+        a.card-link(href='/metrics/edit/'+metric._id) Edit
+        a.card-link(href='#',data-id=metric._id) Delete

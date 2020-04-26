@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST', action='/metrics/edit/'+metric._id)
+        #form-group
+            label Title:
+            input.form-control(name='title', type='text' value=metric.title)
+        #form-group
+            label Source:
+            input.form-control(name='source', type='text' value=metric.source)
+        #form-group
+            label Comment:
+            input.form-control(name='comment' value=metric.comment)
+        input.btn.btn-primary(type='submit', value='Submit').mt-4
+
+        

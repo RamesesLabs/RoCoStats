@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST', action='/metrics/add-metric')
+        #form-group
+            label Title:
+            input.form-control(name='title', type='text')
+        #form-group
+            label Source:
+            input.form-control(name='source', type='text')
+        #form-group
+            label Comment:
+            input.form-control(name='comment')
+        input.btn.btn-primary(type='submit', value='Submit')
